@@ -261,14 +261,14 @@ export default function Contact() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Find Us - Lagos Office</h3>
                 <div className="rounded-lg overflow-hidden h-64">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.3!3d6.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzYnMDAuMCJOIDPCsDEwJzQ4LjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.2!2d3.3419!3d6.6342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93c8b8b8b8b8%3A0x1234567890abcdef!2sAjayi%20Road%2C%20Ogba%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1640995200000"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Funmita Catering Lagos Office Location"
+                    title="Funmita Catering Lagos Office - Off Ajayi Road, Ogba"
                   ></iframe>
                 </div>
                 <p className="text-sm text-gray-600 mt-2">

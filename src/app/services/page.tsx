@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   BuildingOfficeIcon,
   HeartIcon,
@@ -22,7 +23,7 @@ export default function Services() {
         "International cuisine options",
         "Buffet and plated service"
       ],
-      image: "Professional catering setup with Nigerian dishes"
+      image: "https://images.unsplash.com/photo-1555244162-803834f70033?w=600&h=400&fit=crop"
     },
     {
       icon: GiftIcon,
@@ -36,7 +37,7 @@ export default function Services() {
         "Custom small chops combinations",
         "Party-sized portions available"
       ],
-      image: "Colorful array of Nigerian small chops"
+      image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop"
     },
     {
       icon: BeakerIcon,
@@ -50,7 +51,7 @@ export default function Services() {
         "Mocktails for all ages",
         "Professional bartending service"
       ],
-      image: "Colorful cocktails and Chapman drinks"
+      image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&h=400&fit=crop"
     },
     {
       icon: HeartIcon,
@@ -64,7 +65,7 @@ export default function Services() {
         "Personalized gift options",
         "Delivery services available"
       ],
-      image: "Elegantly packaged food hampers"
+      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=400&fit=crop"
     },
     {
       icon: CalendarDaysIcon,
@@ -78,7 +79,7 @@ export default function Services() {
         "Vendor coordination",
         "Day-of event management"
       ],
-      image: "Professional event planning setup"
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop"
     }
   ];
 
@@ -133,12 +134,14 @@ export default function Services() {
                 </div>
                 
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center">
-                    <p className="text-gray-500 text-center px-4">
-                      [{service.image}]
-                      <br />
-                      Professional photography placeholder
-                    </p>
+                  <div className="bg-gray-100 rounded-lg h-80 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>

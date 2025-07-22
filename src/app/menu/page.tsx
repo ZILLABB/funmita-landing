@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState('smallchops');
@@ -20,31 +21,31 @@ export default function Menu() {
         name: 'Small Chops Platter',
         description: 'Assorted Nigerian small chops: puff puff, samosa, spring rolls, and meat pie',
         price: 'Contact for pricing',
-        image: 'Colorful Nigerian small chops arrangement'
+        image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop'
       },
       {
         name: 'Asun (Spicy Goat Meat)',
         description: 'Perfectly spiced and grilled goat meat, a Nigerian delicacy',
         price: 'Contact for pricing',
-        image: 'Delicious spicy asun on a platter'
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop'
       },
       {
         name: 'Puff Puff',
         description: 'Sweet, fluffy Nigerian doughnuts perfect for any occasion',
         price: 'Contact for pricing',
-        image: 'Golden brown puff puff arranged beautifully'
+        image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop'
       },
       {
         name: 'Meat Pie & Sausage Roll',
         description: 'Crispy pastries filled with seasoned meat and vegetables',
         price: 'Contact for pricing',
-        image: 'Fresh meat pies and sausage rolls'
+        image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop'
       },
       {
         name: 'Samosa & Spring Rolls',
         description: 'Crispy fried pastries with savory fillings',
         price: 'Contact for pricing',
-        image: 'Golden samosa and spring rolls'
+        image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop'
       }
     ],
     mains: [
@@ -52,25 +53,25 @@ export default function Menu() {
         name: 'Jollof Rice Special',
         description: 'Premium Nigerian jollof rice with choice of chicken, beef, or fish',
         price: '₦18,000/person',
-        image: 'Perfectly cooked Nigerian jollof rice'
+        image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=300&fit=crop'
       },
       {
         name: 'Pounded Yam & Egusi',
         description: 'Fresh pounded yam served with rich egusi soup and assorted meat',
         price: '₦22,000/person',
-        image: 'Traditional pounded yam and egusi soup'
+        image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=300&fit=crop'
       },
       {
         name: 'Fried Rice & Chicken',
         description: 'Nigerian-style fried rice with grilled chicken and plantain',
         price: '₦16,000/person',
-        image: 'Colorful Nigerian fried rice with chicken'
+        image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop'
       },
       {
         name: 'Amala & Ewedu',
         description: 'Smooth amala served with ewedu soup and gbegiri',
         price: '₦15,000/person',
-        image: 'Traditional Yoruba amala and ewedu'
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop'
       }
     ],
     desserts: [
@@ -104,31 +105,31 @@ export default function Menu() {
         name: 'Signature Chapman',
         description: 'Our specialty Chapman cocktail with grenadine, cucumber, citrus, and secret ingredients',
         price: 'Contact for pricing',
-        image: 'Signature Chapman cocktail with garnish'
+        image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop'
       },
       {
         name: 'Custom Cocktails',
         description: 'Personalized cocktail creations for your special events',
         price: 'Contact for pricing',
-        image: 'Variety of colorful cocktails'
+        image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop'
       },
       {
         name: 'Fresh Fruit Juices',
         description: 'Freshly squeezed orange, pineapple, watermelon, and mixed fruit juices',
         price: 'Contact for pricing',
-        image: 'Fresh Nigerian fruit juices'
+        image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=300&fit=crop'
       },
       {
         name: 'Traditional Nigerian Drinks',
         description: 'Zobo, palm wine, and other authentic Nigerian beverages',
         price: 'Contact for pricing',
-        image: 'Traditional Nigerian drinks selection'
+        image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop'
       },
       {
         name: 'Mocktails',
         description: 'Non-alcoholic versions of popular cocktails for all ages',
         price: 'Contact for pricing',
-        image: 'Colorful mocktails for family events'
+        image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop'
       }
     ],
     hampers: [
@@ -136,25 +137,25 @@ export default function Menu() {
         name: 'Corporate Gift Hampers',
         description: 'Beautifully packaged hampers perfect for corporate gifts and client appreciation',
         price: 'Contact for pricing',
-        image: 'Elegant corporate gift hampers'
+        image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop'
       },
       {
         name: 'Holiday Hampers',
         description: 'Seasonal hampers filled with festive treats and Nigerian delicacies',
         price: 'Contact for pricing',
-        image: 'Festive holiday hampers'
+        image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=300&fit=crop'
       },
       {
         name: 'Custom Celebration Hampers',
         description: 'Personalized hampers for birthdays, anniversaries, and special occasions',
         price: 'Contact for pricing',
-        image: 'Custom celebration hampers'
+        image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&h=300&fit=crop'
       },
       {
         name: 'Traditional Nigerian Hampers',
         description: 'Authentic Nigerian snacks and treats beautifully packaged',
         price: 'Contact for pricing',
-        image: 'Traditional Nigerian food hampers'
+        image: 'https://images.unsplash.com/photo-1607344645866-009c7d0b63e2?w=400&h=300&fit=crop'
       }
     ],
     packages: [
@@ -162,25 +163,25 @@ export default function Menu() {
         name: 'Corporate Lunch Package',
         description: 'Includes appetizer, main course, dessert, and beverages',
         price: '$35/person',
-        image: 'Professional lunch setup'
+        image: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=400&h=300&fit=crop'
       },
       {
         name: 'Wedding Reception Package',
         description: 'Complete wedding catering with cocktail hour and dinner',
         price: '$75/person',
-        image: 'Elegant wedding reception'
+        image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=300&fit=crop'
       },
       {
         name: 'Cocktail Party Package',
         description: 'Assorted appetizers and premium bar service',
         price: '$45/person',
-        image: 'Sophisticated cocktail party'
+        image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop'
       },
       {
         name: 'Family Celebration Package',
         description: 'Perfect for birthdays, anniversaries, and family gatherings',
         price: '$28/person',
-        image: 'Family-style dining setup'
+        image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop'
       }
     ]
   };
@@ -225,12 +226,14 @@ export default function Menu() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {menuItems[activeCategory as keyof typeof menuItems].map((item, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="h-48 bg-gray-200 flex items-center justify-center">
-                  <p className="text-gray-500 text-center px-4">
-                    [{item.image}]
-                    <br />
-                    High-quality food photography
-                  </p>
+                <div className="h-48 bg-gray-200 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">

@@ -15,8 +15,10 @@ const Footer = () => {
                 alt="Funmita Catering Logo"
                 width={200}
                 height={67}
-                className="h-16 w-auto filter brightness-0 invert"
-                style={{ filter: 'brightness(0) invert(1)' }}
+                className="h-16 w-auto"
+                style={{
+                  filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+                }}
               />
             </div>
             <p className="text-gray-300 mb-4">
