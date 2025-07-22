@@ -205,12 +205,26 @@ npm run lint         # Run ESLint
 
 This project is licensed under the MIT License.
 
-## 📞 Support
+## 🏢 Funmita Catering Business Information
 
-For support or questions about this website, please contact:
-- Email: info@funmitacatering.com
-- Phone: +1 (555) 123-4567
+**Founded by Chef Funmi** - Premium catering services across Lagos and Ogun State
+
+### Services Offered:
+- Small Chops & Asun (Nigerian specialties)
+- Signature Chapman Cocktails & Drinks
+- Premium Catering Services
+- Beautiful Hampers & Gift Packaging
+- Complete Event Planning & Management
+
+### Business Locations:
+- **Lagos Office**: 14, Ogo-oluwa Street, Off Ajayi Road, Ogba, Lagos
+- **Ogun Office**: Haggai Estate 7, House 32, Tree of Life Road, Redemption City
+- **Branch**: 3, Ola Thomas, Shangisha
+
+### Contact Information:
+- **Phone**: 07065969591, 08182466432
+- **Email**: funmitak1966@gmail.com
 
 ---
 
-Built with ❤️ using Next.js and Tailwind CSS
+Built with ❤️ for Funmita Catering by Chef Funmi
