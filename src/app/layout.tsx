@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
+import { siteConfig, structuredData } from "@/config/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,19 +12,37 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://funmitacatering.com'),
-  title: "Funmita Catering - Premium Catering Services | Events | Hampers | Planning",
-  description: "Professional catering services specializing in exceptional cuisine, signature cocktails, beautiful hampers, and complete event planning. Serving Lagos and Ogun State.",
-  keywords: "catering services, event planning, hampers packaging, cocktails, corporate catering, wedding catering, Lagos catering, Ogba catering, premium catering",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Funmita Catering | Premium Nigerian Catering in Lagos and Ogun",
+    template: "%s | Funmita Catering",
+  },
+  description: siteConfig.description,
+  keywords: [
+    "Funmita Catering",
+    "Lagos catering",
+    "Ogun catering",
+    "small chops",
+    "asun",
+    "Chapman drinks",
+    "event planning",
+    "corporate hampers",
+    "Nigerian catering",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Funmita Catering - Premium Catering Services | Events | Hampers | Planning",
-    description: "Professional catering services specializing in exceptional cuisine, signature cocktails, beautiful hampers, and complete event planning. Serving Lagos and Ogun State.",
+    title: "Funmita Catering | Premium Nigerian Catering in Lagos and Ogun",
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     images: [
       {
-        url: "/FUNMITA CATERING Logo Design.png",
+        url: siteConfig.logo,
         width: 1200,
         height: 630,
-        alt: "Funmita Catering Logo",
+        alt: "Funmita Catering brand mark",
       },
     ],
     locale: "en_US",
@@ -30,9 +50,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Funmita Catering - Premium Catering Services | Events | Hampers | Planning",
-    description: "Professional catering services specializing in exceptional cuisine, signature cocktails, and complete event planning.",
-    images: ["/FUNMITA CATERING Logo Design.png"],
+    title: "Funmita Catering | Premium Nigerian Catering",
+    description: siteConfig.description,
+    images: [siteConfig.logo],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -42,13 +66,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <Navigation />
-        <main className="min-h-screen pt-16">
-          {children}
-        </main>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </body>
     </html>
   );

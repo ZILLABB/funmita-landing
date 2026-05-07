@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Funmita menu spread</title>
+  <desc id="desc">A polished catering menu illustration with small chops, rice, drinks, and gift packaging.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7e8"/>
+      <stop offset="1" stop-color="#4b2414"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#2b1308" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="1120" fill="url(#bg2)"/>
+  <path d="M0 758c210-92 412-110 606-52 264 78 532 38 794-118v532H0Z" fill="#1a0f0b" opacity=".45"/>
+  <g filter="url(#shadow2)">
+    <circle cx="398" cy="472" r="245" fill="#fff3dc"/>
+    <circle cx="398" cy="472" r="188" fill="#d95c24"/>
+    <path d="M250 530c76-92 168-124 276-98 62 16 108 54 138 114-132 62-270 56-414-16Z" fill="#ffbf41"/>
+    <circle cx="318" cy="396" r="30" fill="#703119"/>
+    <circle cx="412" cy="375" r="36" fill="#703119"/>
+    <circle cx="512" cy="416" r="28" fill="#703119"/>
+    <circle cx="785" cy="585" r="255" fill="#fff8eb"/>
+    <circle cx="785" cy="585" r="190" fill="#f4b13b"/>
+    <path d="M634 608c98-106 214-134 348-84 16 84-30 150-138 198-104 44-194 6-210-114Z" fill="#c63319"/>
+    <rect x="930" y="224" width="118" height="294" rx="40" fill="#f6be4a"/>
+    <rect x="965" y="260" width="52" height="188" rx="24" fill="#de3927"/>
+    <path d="M992 204c34 54 56 110 66 168" stroke="#24140e" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <rect x="1000" y="712" width="220" height="196" rx="24" fill="#f3c67c"/>
+    <path d="M1000 774h220M1110 712v196" stroke="#823617" stroke-width="16"/>
+    <path d="M1052 712c-20-60 42-82 58 0 16-82 80-60 58 0" stroke="#823617" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M156 885c284 92 676 116 1120-18" stroke="#fff3df" stroke-width="16" fill="none" opacity=".55" stroke-linecap="round"/>
+  </g>
+</svg>

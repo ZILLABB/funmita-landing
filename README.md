@@ -1,230 +1,86 @@
-# Funmita Catering Website
+# Funmita Catering Landing Page
 
-A modern, professional website for Funmita Catering built with Next.js, TypeScript, and Tailwind CSS. This website showcases catering services, menu options, and provides an easy way for customers to contact and book catering services.
+Premium production-grade landing page for Funmita Catering, rebuilt with Next.js 15 App Router, TypeScript, Tailwind CSS, Framer Motion, shadcn-style UI primitives, Lucide Icons, and dark/light mode support.
 
-## 🚀 Features
+## What changed
 
-- **Modern Design**: Clean, professional aesthetic with responsive design
-- **Service Showcase**: Detailed pages for different catering services
-- **Interactive Menu**: Categorized menu with pricing and descriptions
-- **Contact Form**: Functional contact form with validation
-- **About Us**: Company story, team, and values
-- **Testimonials**: Customer reviews and ratings
-- **SEO Optimized**: Meta tags, structured data, and performance optimized
-- **Mobile Responsive**: Fully responsive design for all devices
-- **Accessibility**: WCAG compliant with proper ARIA labels
+- Rebuilt the website as a conversion-focused landing experience.
+- Added scalable content/config architecture in `src/config/site.ts`.
+- Added reusable UI primitives in `src/components/ui`.
+- Added section-based composition in `src/components/sections`.
+- Added responsive navigation, mobile menu, dark/light theme toggle, and accessible CTAs.
+- Added metadata, OpenGraph, Twitter cards, canonical URL, robots config, and JSON-LD local business schema.
+- Added reduced-motion-aware Framer Motion reveal animations.
+- Replaced duplicated page-level implementations with reusable, typed modules.
 
-## 🛠️ Tech Stack
+## Tech stack
 
-- **Framework**: Next.js 15.4.2 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 4.0
-- **Icons**: Heroicons
-- **Animations**: Framer Motion
-- **Font**: Inter (Google Fonts)
+- Next.js 15 App Router
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- shadcn/ui-style primitives
+- Radix UI
+- Lucide Icons
+- next-themes
 
-## 📁 Project Structure
+## Project structure
 
-```
-funmita-catering/
-├── src/
-│   ├── app/                 # App Router pages
-│   │   ├── about/          # About Us page
-│   │   ├── contact/        # Contact page
-│   │   ├── menu/           # Menu page
-│   │   ├── services/       # Services page
-│   │   ├── globals.css     # Global styles
-│   │   ├── layout.tsx      # Root layout
-│   │   └── page.tsx        # Homepage
-│   ├── components/         # Reusable components
-│   │   ├── Navigation.tsx  # Main navigation
-│   │   ├── Footer.tsx      # Footer component
-│   │   ├── Testimonials.tsx # Testimonials component
-│   │   └── SEO.tsx         # SEO component
-│   ├── lib/                # Utility functions
-│   │   └── utils.ts        # Helper functions
-│   └── types/              # TypeScript type definitions
-├── public/                 # Static assets
-├── package.json           # Dependencies and scripts
-└── README.md              # Project documentation
+```txt
+src/
+  app/                 App Router pages, metadata, global styles
+  components/
+    layout/            Navbar and footer
+    motion/            Animation wrappers
+    sections/          Landing page sections
+    ui/                Reusable shadcn-style primitives
+  config/              Typed brand, content, nav, SEO, and schema data
+  lib/                 Utilities
 ```
 
-## 🚀 Getting Started
+## Design system
 
-### Prerequisites
+The design uses CSS variables in `src/app/globals.css` for light and dark themes:
 
-- Node.js 18+
-- npm, yarn, or pnpm
+- `--background`, `--foreground`, `--card`, `--muted`, `--border`
+- `--primary` for the Funmita warm orange brand color
+- `--secondary` and `--accent` for soft hospitality tones
+- `--radius` for consistent 8px UI corners
 
-### Installation
+Tailwind consumes those tokens from `tailwind.config.ts`, keeping layout, color, radius, and shadows consistent across the site.
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd funmita-catering
-```
+## Local development
 
-2. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-3. Run the development server:
-```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open `http://localhost:3000`.
 
-## 📱 Pages Overview
+## Verification
 
-### Homepage (`/`)
-- Hero section with call-to-action
-- Company overview
-- Featured services
-- Statistics section
-- Customer testimonials
-- Contact CTA
-
-### Services (`/services`)
-- Corporate events catering
-- Wedding catering
-- Private parties
-- Educational events
-- Process overview
-- Service packages
-
-### Menu (`/menu`)
-- Interactive menu categories
-- Appetizers, main courses, desserts, beverages
-- Event packages
-- Custom menu options
-- Pricing information
-
-### About Us (`/about`)
-- Company story and history
-- Mission and vision
-- Core values
-- Team members
-- Company timeline
-
-### Contact (`/contact`)
-- Contact form with validation
-- Business information
-- Location and hours
-- FAQ section
-- Interactive map placeholder
-
-## 🎨 Customization
-
-### Colors
-The website uses an orange-based color scheme. To customize:
-
-1. Update CSS variables in `src/app/globals.css`
-2. Modify Tailwind classes throughout components
-3. Update the theme color in meta tags
-
-### Content
-- Update company information in components
-- Replace placeholder images with professional photography
-- Modify menu items and pricing in `/menu/page.tsx`
-- Update testimonials in `/components/Testimonials.tsx`
-
-### Images
-- Add professional food photography to `/public/images/`
-- Update image references in components
-- Optimize images for web performance
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Push code to GitHub repository
-2. Connect repository to Vercel
-3. Deploy automatically
-
-### Other Platforms
-The website can be deployed to any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
-
-### Build for Production
 ```bash
+npm run lint
 npm run build
-npm start
 ```
 
-## 📊 Performance Optimization
+## Deployment
 
-- **Images**: Use Next.js Image component for optimization
-- **Fonts**: Self-hosted fonts with font-display: swap
-- **CSS**: Tailwind CSS with purging for minimal bundle size
-- **JavaScript**: Code splitting with Next.js App Router
-- **SEO**: Meta tags, structured data, and sitemap
+Vercel is recommended:
 
-## 🔧 Development Scripts
+1. Push `zillab-branch` to GitHub.
+2. Import the repository into Vercel.
+3. Use the default Next.js settings.
+4. Deploy from `zillab-branch` or merge after review.
 
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
-```
+For other platforms, build with `npm run build` and start with `npm run start`.
 
-## 📝 TODO / Future Enhancements
+## Future improvements
 
-- [ ] Add image gallery with lightbox
-- [ ] Implement blog/news section
-- [ ] Add online booking system
-- [ ] Integrate with CMS (Contentful/Strapi)
-- [ ] Add multi-language support
-- [ ] Implement analytics (Google Analytics)
-- [ ] Add live chat functionality
-- [ ] Create admin dashboard
-- [ ] Add payment integration
-- [ ] Implement email marketing integration
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🏢 Funmita Catering Business Information
-
-**Founded by Chef Funmi** - Premium catering services across Lagos and Ogun State
-
-### Services Offered:
-- Small Chops & Asun (Nigerian specialties)
-- Signature Chapman Cocktails & Drinks
-- Premium Catering Services
-- Beautiful Hampers & Gift Packaging
-- Complete Event Planning & Management
-
-### Business Locations:
-- **Lagos Office**: 14, Ogo-oluwa Street, Off Ajayi Road, Ogba, Lagos
-- **Ogun Office**: Haggai Estate 7, House 32, Tree of Life Road, Redemption City
-- **Branch**: 3, Ola Thomas, Shangisha
-
-### Contact Information:
-- **Phone**: 07065969591, 08182466432
-- **Email**: funmitak1966@gmail.com
-
----
-
-Built with ❤️ for Funmita Catering by Chef Funmi
+- Replace Unsplash placeholders with original Funmita food and event photography.
+- Connect the CTA flow to a real booking/contact backend.
+- Add analytics and conversion tracking.
+- Add a CMS for menu, testimonials, packages, and seasonal hampers.
+- Add richer gallery pages once brand photography is available.
