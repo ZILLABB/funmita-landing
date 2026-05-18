@@ -1,90 +1,87 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { stats, trustSignals } from "@/config/site";
+import { stats } from "@/config/site";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-28">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--primary)/0.18),transparent_34%),linear-gradient(135deg,hsl(var(--background)),hsl(var(--muted)))]" />
-      <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl items-center gap-10 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-[1.04fr_0.96fr] lg:px-8">
+    <section className="relative isolate overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="https://images.unsplash.com/photo-1665400808116-f0e6339b7e9a?w=1920&q=80&auto=format&fit=crop"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+      </div>
+
+      <div className="mx-auto grid min-h-[100svh] max-w-7xl items-center gap-10 px-4 pb-20 pt-32 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
         <Reveal>
           <div>
-            <Badge className="bg-background/70 backdrop-blur">
-              <Sparkles className="mr-2 h-3.5 w-3.5" aria-hidden="true" />
-              Premium Nigerian catering for refined celebrations
-            </Badge>
-            <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-normal text-foreground sm:text-6xl lg:text-7xl">
-              Catering that makes every table feel thoughtfully hosted.
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">
+              Lagos &middot; Ogun State &middot; Since 2009
+            </p>
+            <h1 className="mt-5 max-w-[18ch] text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Food that proves your event was worth attending.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-              Funmita Catering creates memorable food experiences with small chops, asun, signature Chapman,
-              beautiful hampers, full-service catering, and event planning across Lagos and Ogun State.
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/75">
+              Funmita Catering handles small chops, asun, jollof, Chapman, hampers, and full event service — so your
+              guests remember the food long after the party.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-amber-500 text-black hover:bg-amber-400">
                 <Link href="#contact">
-                  Get a quote
+                  Get a free quote
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="#menu">Explore menus</Link>
+              <Button asChild variant="outline" size="lg" className="border-white/30 bg-transparent text-white hover:bg-white/10">
+                <Link href="#menu">See the menu</Link>
               </Button>
             </div>
-            <dl className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+
+            <dl className="mt-12 flex flex-wrap gap-x-10 gap-y-4">
               {stats.map((stat) => (
-                <div key={stat.label} className="rounded-lg border border-border/80 bg-background/55 p-4 backdrop-blur">
-                  <dt className="text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">{stat.label}</dt>
-                  <dd className="mt-2 text-2xl font-bold text-foreground">{stat.value}</dd>
+                <div key={stat.label}>
+                  <dd className="text-3xl font-bold text-white">{stat.value}</dd>
+                  <dt className="mt-1 text-sm text-white/60">{stat.label}</dt>
                 </div>
               ))}
             </dl>
           </div>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-white/20 shadow-2xl">
-              <Image
-                src="/funmita-event-spread.svg"
-                alt="Illustrated Funmita Catering event spread with dishes, drinks, and hamper"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 46vw, 100vw"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-              <Card className="absolute bottom-4 left-4 right-4 border-white/20 bg-background/82 p-4 shadow-2xl backdrop-blur-xl sm:left-6 sm:right-auto sm:w-80">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary text-primary-foreground">
-                    <CalendarDays className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="font-semibold">Tasting and menu planning</p>
-                    <p className="text-sm text-muted-foreground">Consultations tailored to your event.</p>
-                  </div>
-                </div>
-              </Card>
+        <Reveal delay={0.15}>
+          <div className="hidden lg:block">
+            <div className="relative">
+              <div className="aspect-[3/4] overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1664993101841-036f189719b6?w=800&q=80&auto=format&fit=crop"
+                  alt="Jollof rice with chicken — a signature Nigerian party dish"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 40vw, 0vw"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 aspect-square w-40 overflow-hidden rounded-xl border-4 border-black shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1603496987674-79600a000f55?w=400&q=80&auto=format&fit=crop"
+                  alt="Fried chicken on jollof rice — Nigerian event catering staple"
+                  fill
+                  className="object-cover"
+                  sizes="160px"
+                />
+              </div>
             </div>
           </div>
         </Reveal>
-      </div>
-
-      <div className="border-y border-border/80 bg-background/70 backdrop-blur">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px px-4 py-4 sm:grid-cols-3 lg:grid-cols-6 lg:px-8">
-          {trustSignals.map((signal) => (
-            <div key={signal.text} className="flex items-center justify-center gap-2 px-2 py-3 text-sm text-muted-foreground">
-              <signal.icon className="h-4 w-4 text-primary" aria-hidden="true" />
-              {signal.text}
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

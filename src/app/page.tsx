@@ -1,5 +1,6 @@
 import { ContactCTA } from "@/components/sections/contact-cta";
 import { FAQ } from "@/components/sections/faq";
+import { Gallery } from "@/components/sections/gallery";
 import { Hero } from "@/components/sections/hero";
 import { MenuShowcase } from "@/components/sections/menu-showcase";
 import { Pricing } from "@/components/sections/pricing";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Services />
       <MenuShowcase />
+      <Gallery />
       <Process />
       <Testimonials />
       <Pricing />
